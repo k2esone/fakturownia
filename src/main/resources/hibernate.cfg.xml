@@ -15,9 +15,9 @@
         <property name="hibernate.hbm2ddl.auto">update</property>
 
         <!-- Definicja modeli -->
-        <mapping class="pl.sda.j133.hibernate.fakturownia.model.Firma"/>
-        <mapping class="pl.sda.j133.hibernate.fakturownia.model.Faktura"/>
-        <mapping class="pl.sda.j133.hibernate.fakturownia.model.Platnosc"/>
-        <mapping class="pl.sda.j133.hibernate.fakturownia.model.Kontrahent"/>
+        <mapping class="pl.sda.hibernate.fakturownia.model.Firma"/>
+        <mapping class="pl.sda.hibernate.fakturownia.model.Faktura"/>
+        <mapping class="pl.sda.hibernate.fakturownia.model.Platnosc"/>
+        <mapping class="pl.sda.hibernate.fakturownia.model.Kontrahent"/>
     </session-factory>
 </hibernate-configuration>

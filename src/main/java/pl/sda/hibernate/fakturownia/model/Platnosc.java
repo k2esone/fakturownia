@@ -1,11 +1,11 @@
 package pl.sda.hibernate.fakturownia.model;
 
 
-import jakarta.persistence.Entity;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import jakarta.persistence.*;
+import lombok.*;
+import org.hibernate.annotations.CreationTimestamp;
+
+import java.time.LocalDateTime;
 
 @Data
 @Entity
@@ -13,4 +13,20 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Platnosc {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private Double kwota;
+
+    @Enumerated(EnumType.STRING)
+    private FormaPlatnosci forma;
+
+    @CreationTimestamp
+    private LocalDateTime dataRealizacji;
+
+    @ManyToOne
+    @EqualsAndHashCode.Exclude
+    private Faktura faktura;
+
 }
