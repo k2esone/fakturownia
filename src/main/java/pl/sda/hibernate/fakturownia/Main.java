@@ -1,7 +1,6 @@
 package pl.sda.hibernate.fakturownia;
 
-import pl.sda.hibernate.fakturownia.komendy.Komenda;
-import pl.sda.hibernate.fakturownia.komendy.KomendaDodajFirme;
+import pl.sda.hibernate.fakturownia.komendy.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +10,18 @@ public class Main {
 
         List<Komenda> listaKomend = new ArrayList<>(
                 List.of(
-                        new KomendaDodajFirme()
+                        new KomendaDodajFirme(),
+                        new KomendaDodajKontrahenta(),
+                        new KomendaDodajPlatnosc(),
+                        new KomendaDodajFaktura(),
+                        new KomendaListaFirma(),
+                        new KomendaListaKontrahent(),
+                        new KomendaListaPlatnosc(),
+                        new KomendaListaFaktura(),
+                        new KomendaUsunFirma(),
+                        new KomendaUsunKontrahent(),
+                        new KomendaUsunPlatnosc(),
+                        new KomendaUsunFaktura()
 
                 )
         );
